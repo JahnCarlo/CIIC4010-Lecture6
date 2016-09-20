@@ -37,5 +37,11 @@ public class ArraySetLongTest {
 		assertEquals("product(): Wrong product returned", s.product(),120);
 	}
 	
+	@Test
+	public void testisMember() {
+		assertTrue("isMember(): Did not find set number", s.isMember(5));
+		assertFalse("isMember(): Number is not in set", s.isMember(6));
+	}
+	
 	
 }

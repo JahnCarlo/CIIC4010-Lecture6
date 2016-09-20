@@ -45,7 +45,18 @@ public class ArraySetLong {
 	 * Returns a long representing the maximum element in the set
 	 */
 	public long max() {
-		return -1; // Dummy temp return
+		if (!this.isEmpty()){
+			long maxNum = theElements[0];
+			for (int i = 1; i < numElements; i++){
+				if (theElements[i] > maxNum){
+					maxNum = theElements[i];
+				}
+			}
+			return maxNum;
+		}
+		else{
+			throw new RuntimeException("Attempted to find max of empty array");
+		}
 	}
 
 	/*
@@ -53,14 +64,29 @@ public class ArraySetLong {
 	 * Returns a long representing the minimum element in the set
 	 */
 	public long min() {
-		return -1; // Dummy temp return
+		if (!this.isEmpty()){
+			long minNum = theElements[0];
+			for (int i = 1; i < numElements; i++){
+				if (theElements[i] < minNum){
+					minNum = theElements[i];
+				}
+			}
+			return minNum;
+		}
+		else{
+			throw new RuntimeException("Attempted to find min of empty array");
+		}
 	}
 	/*
 	 * sum()
 	 * Returns a long representing the sum of all elements of the set
 	 */
 	public long sum() {
-		return -1; // Dummy return
+			long total = 0;
+			for (int i = 0; i < numElements; i++){
+				total += theElements[i];
+			}
+			return total;
 	}
 	
 	/*
@@ -68,8 +94,19 @@ public class ArraySetLong {
 	 * Returns a long representing the product of all the elements in the set
 	 */
 	public long product() {
-		return -1; // Dummy return
+		long total = 1;
+		for (int i = 0; i < numElements; i++){
+			total *= theElements[i];
+		}
+		return total;
 	}
 	
+	public boolean isMember(long key){
+		boolean found = false;
+		int i = 0;
+		while(!found && i<numElements) {
+			if (theElements)
+		}
+	}
 	
 }
